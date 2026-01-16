@@ -18,6 +18,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.annotation.DrawableRes
 
 class StudentOneActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +29,7 @@ class StudentOneActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize()
                 ) {
                     StudentScreen(
+                        profileImageRes = R.drawable.mypfp,
                         studentName = "Maria Manuela Gonzales",
                         bio = "Hi! I am student from Pamantasan ng Cabuyao, taking Bachelor of Science" +
                                 " in Information Technology. I enjoy making UI designs!",
@@ -41,6 +43,7 @@ class StudentOneActivity : ComponentActivity() {
 
 @Composable
 fun StudentScreen(
+    @DrawableRes profileImageRes: Int,
     studentName: String,
     bio: String,
     onBackClick: () -> Unit
@@ -55,7 +58,7 @@ fun StudentScreen(
 
         // PROFILE IMAGE
         Image(
-            painter = painterResource(id = R.drawable.mypfp),
+            painter = painterResource(id = profileImageRes),
             contentDescription = "Profile Photo",
             modifier = Modifier
                 .size(150.dp)
