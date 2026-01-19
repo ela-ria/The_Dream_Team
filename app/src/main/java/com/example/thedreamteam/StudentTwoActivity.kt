@@ -18,7 +18,7 @@ class StudentTwoActivity : ComponentActivity() {
                     StudentScreen(
                         profileImageRes = R.drawable.student2,
                         studentName = "Kim Aldrin D. Maurin",
-                        bio = "Hi, I am student from Pamantasan ng Cabuyao, taking Bachelor of Science in Information Technology , A curious and motivated person who enjoys learning new things",
+                        bio = "Hi, I am student from Pamantasan ng Cabuyao, taking Bachelor of Science in Information Technology , A motivated person who enjoys learning new things Specially in programming",
                         onBackClick = { finish() }
                     )
                 }
